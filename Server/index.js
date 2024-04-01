@@ -7,6 +7,7 @@ const path = require('path');
 const dns = require('oci-dns');
 const identity = require('oci-identity')
 
+require('dotenv').config();
 const app = express();
 
 app.use(bodyParser.urlencoded({extended: true}));
@@ -14,7 +15,7 @@ app.use(express.json());
 
 app.use(
     cors({
-         origin: "http://localhost:3000", // allow to server to accept request from different origin
+         origin: "https://dns-manager-xi.vercel.app", // allow to server to accept request from different origin
          methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
          credentials: true, // allow session cookie from browser to pass through
    })
