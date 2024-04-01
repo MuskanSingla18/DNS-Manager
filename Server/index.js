@@ -21,7 +21,7 @@ app.use(
    })
   );
 
-const ociConfigPath = path.join(os.homedir(), '.oci', 'config');
+//const ociConfigPath = path.join(os.homedir(), '.oci', 'config');
 
 // Use the full path when creating the ConfigFileAuthenticationDetailsProvider
 const provider = new common.ConfigFileAuthenticationDetailsProvider({
