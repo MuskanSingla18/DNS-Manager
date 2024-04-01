@@ -1,3 +1,3 @@
 # DNS-Manager
 
-[Link Text](https://www.example.com](https://dns-manager-xi.vercel.app/)
+[Link Website](https://dns-manager-xi.vercel.app/)
