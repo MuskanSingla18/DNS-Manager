@@ -21,15 +21,16 @@ app.use(
    })
   );
 
-//const ociConfigPath = path.join(os.homedir(), '.oci', 'config');
+const ociConfigPath = path.join(os.homedir(), '.oci', 'config');
+const provider = new common.ConfigFileAuthenticationDetailsProvider(ociConfigPath);
 
 // Use the full path when creating the ConfigFileAuthenticationDetailsProvider
-const provider = new common.ConfigFileAuthenticationDetailsProvider({
-  userId: process.env.user,
-  fingerprint: process.env.fingerprint,
-  privateKey: process.env.key_file,
-  tenancyId: process.env.tenancy,
-});
+// const provider = new common.ConfigFileAuthenticationDetailsProvider({
+//   userId: process.env.user,
+//   fingerprint: process.env.fingerprint,
+//   privateKey: process.env.key_file,
+//   tenancyId: process.env.tenancy,
+// });
 
 app.get('/zoneRecords/:ocid/:name/:compartmentID', async (req, res) => {
     
