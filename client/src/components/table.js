@@ -19,7 +19,7 @@ export default function DataTable(props) {
     <div className="table-container" style={{ width: '80%' }} >
       <div className="table-header">
         <Button variant="contained" style={{ marginLeft:'10px' , marginRight: '10px' }} onClick={props.addRecord}>Add {props.add}</Button>
-        <ActionButton></ActionButton>
+        
       </div>
       <div className="table">
         <TableContainer component={Paper}>
